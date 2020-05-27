@@ -28,7 +28,7 @@ class theta(scenario):
 
     def __init__(self):
         # Network configuration
-        self.config = yaml.load(open(load_config("theta"), "r"), yaml.FullLoader)
+        self.config = yaml.load(open(load_config("theta"), "r"))
         self.config["swmm_input"] = load_network(self.config["swmm_input"])
 
         self.threshold = 0.5
